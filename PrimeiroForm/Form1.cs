@@ -24,7 +24,12 @@ namespace PrimeiroForm
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            this.BackColor  = System.Drawing.Color.Green;
 
+            nomeLido.Text = tb_name.Text;
+            MessageBox.Show("Nome digitado = "+tb_name.Text);
+
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -53,6 +58,16 @@ namespace PrimeiroForm
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nomeLido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
 
         }

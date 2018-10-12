@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_name = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -56,16 +56,17 @@
             this.cadastroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cADASTRADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.nAOCADASTRADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.valor = new System.Windows.Forms.NumericUpDown();
+            this.valorComHoras = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
+            this.nomeLido = new System.Windows.Forms.TextBox();
             this.contextMenuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.valor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.valorComHoras)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -80,14 +81,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tela de cadastro de clientes";
             // 
-            // textBox1
+            // tb_name
             // 
-            this.textBox1.Location = new System.Drawing.Point(88, 87);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "cadastro";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tb_name.Location = new System.Drawing.Point(88, 87);
+            this.tb_name.Name = "tb_name";
+            this.tb_name.Size = new System.Drawing.Size(182, 20);
+            this.tb_name.TabIndex = 1;
+            this.tb_name.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -293,17 +293,17 @@
             this.cADASTRADOSToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.cADASTRADOSToolStripMenuItem.Text = "CADASTRADOS";
             // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(148, 270);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 12;
-            // 
             // nAOCADASTRADOSToolStripMenuItem
             // 
             this.nAOCADASTRADOSToolStripMenuItem.Name = "nAOCADASTRADOSToolStripMenuItem";
             this.nAOCADASTRADOSToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.nAOCADASTRADOSToolStripMenuItem.Text = "NAO-CADASTRADOS";
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(148, 270);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 12;
             // 
             // textBox5
             // 
@@ -312,29 +312,38 @@
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 13;
             // 
-            // numericUpDown1
+            // valor
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(16, 355);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 14;
+            this.valor.Location = new System.Drawing.Point(16, 355);
+            this.valor.Name = "valor";
+            this.valor.Size = new System.Drawing.Size(120, 20);
+            this.valor.TabIndex = 14;
+            this.valor.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // numericUpDown2
+            // valorComHoras
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(16, 382);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 15;
+            this.valorComHoras.Location = new System.Drawing.Point(16, 382);
+            this.valorComHoras.Name = "valorComHoras";
+            this.valorComHoras.Size = new System.Drawing.Size(120, 20);
+            this.valorComHoras.TabIndex = 15;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(13, 339);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.Size = new System.Drawing.Size(31, 13);
             this.label7.TabIndex = 16;
-            this.label7.Text = "label7";
+            this.label7.Text = "Valor";
             this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // nomeLido
+            // 
+            this.nomeLido.Location = new System.Drawing.Point(534, 221);
+            this.nomeLido.Name = "nomeLido";
+            this.nomeLido.Size = new System.Drawing.Size(100, 20);
+            this.nomeLido.TabIndex = 17;
+            this.nomeLido.TextChanged += new System.EventHandler(this.nomeLido_TextChanged);
             // 
             // Form1
             // 
@@ -343,9 +352,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.nomeLido);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.valorComHoras);
+            this.Controls.Add(this.valor);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.menuStrip1);
@@ -364,7 +374,7 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_name);
             this.Controls.Add(this.label1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -372,8 +382,8 @@
             this.contextMenuStrip2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.valor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.valorComHoras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,7 +393,7 @@
 
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_name;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
@@ -411,9 +421,10 @@
         private System.Windows.Forms.ToolStripMenuItem cADASTRADOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nAOCADASTRADOSToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown valor;
+        private System.Windows.Forms.NumericUpDown valorComHoras;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox nomeLido;
     }
 }
 
